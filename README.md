@@ -47,9 +47,7 @@ WordPress Alt Text Updater is a Python-based tool designed to update the alt tex
 
 Contributions are welcome! Please open an issue or submit a pull request with your improvements.
 
-#### License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
 
 ### Overview (فارسی)
 
@@ -99,7 +97,3 @@ This project is licensed under the MIT License. See the LICENSE file for details
 #### مشارکت
 
 مشارکت‌ها استقبال می‌شود! لطفاً یک issue باز کنید یا یک pull request با بهبودهای خود ارسال کنید.
-
-#### مجوز
-
-این پروژه تحت مجوز MIT منتشر شده است. برای جزئیات بیشتر به فایل LICENSE مراجعه کنید.
