@@ -21,15 +21,6 @@ WordPress Alt Text Updater is a Python-based tool designed to update the alt tex
 
 2. **Install the required packages:**
 
-    Create a `requirements.txt` file with the following content:
-
-    ```
-    requests
-    tkinter
-    ```
-
-    Then, run:
-
     ```bash
     pip install -r requirements.txt
     ```
@@ -83,15 +74,6 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 2. **نصب بسته‌های مورد نیاز:**
 
-    یک فایل `requirements.txt` با محتوای زیر ایجاد کنید:
-
-    ```
-    requests
-    tkinter
-    ```
-
-    سپس، اجرا کنید:
-
     ```bash
     pip install -r requirements.txt
     ```
@@ -117,3 +99,7 @@ This project is licensed under the MIT License. See the LICENSE file for details
 #### مشارکت
 
 مشارکت‌ها استقبال می‌شود! لطفاً یک issue باز کنید یا یک pull request با بهبودهای خود ارسال کنید.
+
+#### مجوز
+
+این پروژه تحت مجوز MIT منتشر شده است. برای جزئیات بیشتر به فایل LICENSE مراجعه کنید.
