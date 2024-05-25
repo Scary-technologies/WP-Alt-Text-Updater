@@ -1,37 +1,119 @@
-### بررسی اجمالی
-این یک اسکریپت پایتون است که با استفاده از کتابخانه Tkinter یک رابط کاربری گرافیکی (GUI) ایجاد می‌کند تا متن ALT تصاویر را در پایگاه داده وردپرس به‌روزرسانی کند.
+### Overview (English)
 
-### اجزای اصلی
-این اسکریپت شامل چندین قسمت است:
+#### WordPress Alt Text Updater (SQL with GUI)
 
-1. **اتصال به پایگاه داده**: اسکریپت با استفاده از کتابخانه `mysql-connector-python` یک اتصال به پایگاه داده MySQL برقرار می‌کند.
-2. **رابط کاربری گرافیکی (GUI)**: اسکریپت یک رابط کاربری گرافیکی با استفاده از Tkinter ایجاد می‌کند که شامل چندین فیلد ورودی، یک دکمه ارسال و یک ویجت Treeview است.
-3. **تابع به‌روزرسانی متن ALT تصاویر**: اسکریپت تابعی به نام `update_image_alts` تعریف می‌کند که متن ALT تصاویر را در پایگاه داده وردپرس به‌روزرسانی می‌کند.
+WordPress Alt Text Updater is a Python-based tool designed to update the alt text of images in a WordPress database. It features a graphical user interface (GUI) using Tkinter, providing a user-friendly experience for managing image metadata.
 
-### عملکرد
-#### رابط کاربری گرافیکی (GUI)
-رابط کاربری گرافیکی شامل فیلدهای ورودی زیر است:
+#### Features
 
-- **Host**: نام میزبان سرور MySQL.
-- **User**: نام کاربری برای اتصال به MySQL.
-- **Password**: رمز عبور برای اتصال به MySQL.
-- **Database**: نام پایگاه داده وردپرس.
-- **Table Prefix**: پیشوند جداول وردپرس.
-- **Alt Text**: متن ALT پیش‌فرض برای استفاده در تصاویر.
-- **Valid Extensions**: لیست جدا شده با کاما از پسوندهای معتبر فایل‌های تصویری.
+- **Update Alt Text**: Easily update the alt text for images in a WordPress database.
+- **GUI Interface**: Intuitive GUI using Tkinter for managing updates.
+- **SQL Integration**: Directly interacts with the WordPress database using SQL.
 
-رابط کاربری گرافیکی همچنین شامل یک دکمه ارسال و یک ویجت Treeview برای نمایش اطلاعات به‌روزرسانی شده تصاویر است.
+#### Installation
 
-#### تابع `update_image_alts`
-این تابع مقادیر ورودی از GUI را گرفته و متن ALT تصاویر در پایگاه داده وردپرس را به‌روزرسانی می‌کند. مراحل انجام شده توسط این تابع عبارتند از:
+1. **Clone the repository:**
 
-1. برقراری اتصال به پایگاه داده MySQL.
-2. بازیابی لیست تصاویر از پایگاه داده با استفاده از یک کوئری SQL.
-3. پیمایش در لیست تصاویر و به‌روزرسانی متن ALT در صورتی که خالی باشد یا وجود نداشته باشد.
-4. وارد کردن اطلاعات به‌روزرسانی شده تصاویر به ویجت Treeview.
+    ```bash
+    git clone https://github.com/Scary-technologies/WordPress-Alt-Text-Updater-SQL_With_GUI-.git
+    cd WordPress-Alt-Text-Updater-SQL_With_GUI-
+    ```
 
-### مدیریت خطا
-اسکریپت شامل مدیریت خطا با استفاده از بلوک‌های try-except است تا هرگونه خطا که ممکن است در هنگام اتصال به پایگاه داده یا اجرای کوئری رخ دهد را بررسی کند.
+2. **Install the required packages:**
 
-### حلقه اصلی
-اسکریپت با استفاده از `root.mainloop()` حلقه رویداد GUI را شروع می‌کند که منتظر ورودی کاربر می‌ماند و رابط کاربری را به‌روزرسانی می‌کند.
+    Create a `requirements.txt` file with the following content:
+
+    ```
+    requests
+    tkinter
+    ```
+
+    Then, run:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+#### Usage
+
+1. **Run the application:**
+
+    ```bash
+    python Main.py
+    ```
+
+2. **Enter your database credentials and alt text information in the GUI.**
+
+3. **Use the interface to update the alt text for images in your WordPress database.**
+
+#### Code Overview
+
+- **Logging**: Configured to display debug information and errors.
+- **Database Interaction**: Functions to connect and update the WordPress database using SQL.
+- **Tkinter Interface**: Provides a clean and interactive GUI for updating image alt texts.
+
+#### Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request with your improvements.
+
+#### License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+### Overview (فارسی)
+
+#### به‌روزرسانی Alt Text تصاویر وردپرس (SQL با GUI)
+
+به‌روزرسانی Alt Text تصاویر وردپرس یک ابزار مبتنی بر پایتون است که برای به‌روزرسانی alt text تصاویر در پایگاه داده وردپرس طراحی شده است. این ابزار دارای یک رابط کاربری گرافیکی (GUI) با استفاده از Tkinter است که تجربه کاربری آسانی برای مدیریت متادیتای تصاویر فراهم می‌کند.
+
+#### ویژگی‌ها
+
+- **به‌روزرسانی Alt Text**: به‌راحتی alt text تصاویر را در پایگاه داده وردپرس به‌روزرسانی کنید.
+- **رابط کاربری گرافیکی (GUI)**: رابط کاربری گرافیکی قابل درک با استفاده از Tkinter برای مدیریت به‌روزرسانی‌ها.
+- **یکپارچه‌سازی SQL**: تعامل مستقیم با پایگاه داده وردپرس با استفاده از SQL.
+
+#### نصب
+
+1. **کلون کردن مخزن:**
+
+    ```bash
+    git clone https://github.com/Scary-technologies/WordPress-Alt-Text-Updater-SQL_With_GUI-.git
+    cd WordPress-Alt-Text-Updater-SQL_With_GUI-
+    ```
+
+2. **نصب بسته‌های مورد نیاز:**
+
+    یک فایل `requirements.txt` با محتوای زیر ایجاد کنید:
+
+    ```
+    requests
+    tkinter
+    ```
+
+    سپس، اجرا کنید:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+#### استفاده
+
+1. **اجرای برنامه:**
+
+    ```bash
+    python Main.py
+    ```
+
+2. **مشخصات پایگاه داده و اطلاعات alt text خود را در GUI وارد کنید.**
+
+3. **از رابط کاربری برای به‌روزرسانی alt text تصاویر در پایگاه داده وردپرس خود استفاده کنید.**
+
+#### نمای کلی کد
+
+- **لاگ‌گذاری**: پیکربندی شده برای نمایش اطلاعات دقیق و خطاها.
+- **تعامل با پایگاه داده**: توابعی برای اتصال و به‌روزرسانی پایگاه داده وردپرس با استفاده از SQL.
+- **رابط کاربری Tkinter**: ارائه یک رابط کاربری تمیز و تعاملی برای به‌روزرسانی alt text تصاویر.
+
+#### مشارکت
+
+مشارکت‌ها استقبال می‌شود! لطفاً یک issue باز کنید یا یک pull request با بهبودهای خود ارسال کنید.
